@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+} 
+.hero{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../pics/athletic.jpg);
+    background-position: center;
+    background-size: 100% 100% ;
+    position: absolute;
+    display: flex;
+}
+.form-con{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-box{
+    border: 1px solid black;
+    width: 380px;
+    height: 480px;
+    position: relative;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.in-form-con{
+    display: flex;
+    width: 100%;
+}
+.button-box{
+    width: 220px;
+    height: 40px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #ff105F,#ffad06);
+    border-radius: 30px;
+    transition: .5s;
+}
+.forms{
+    display: flex;
+    width: 250px;
+    margin-bottom: 20px;
+    padding: 0px 10px;
+    height: 35px;
+}
+.input-group{
+    position: absolute;
+    transition: .5s;
+}
+.input-field{
+    width: 100%;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit-btn{
+    width: 85%;
+    cursor: pointer;
+    display: block;
+    background: linear-gradient(to right, #ff105f,#ffad06);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+}
+.check-box{
+    margin-right: 10px;
+}
+span{
+    color: #777;
+    padding-top: 8px;
+}
+[form-sec]{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+}
+[social-icon-sec]{
+    height: 70px;
+}
+[submit-btn]{
+    display: flex;
+    justify-content: center;
+}
+#login{
+    left: 50px;
+}
+#register{
+    left: 450px;
+}
+@media only  screen and (max-width: 500px) {
+    .form-box{
+        width: 330px;
+    }
+    .forms{
+        width: 200px;
+    }
+}
