@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Cinzel:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Cinzel:wght@700&family=News+Cycle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Cinzel:wght@700&family=Julius+Sans+One&family=News+Cycle&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+} 
+.hero{
+    height: 700px;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../pics/attendance-software.png);
+    background-position: center;
+    background-size: 100% 100% ;
+    position: absolute;
+    display: flex;
+}
+.form-con{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-box{
+    width: 380px;
+    height: 670px;
+    border-radius: 10px;
+    position: relative;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.in-form-con{
+    display: flex;
+    width: 100%;
+}
+.in-form-con[social]{
+   justify-content: center;
+}
+.in-form-con[title]{
+    justify-content: center;
+    flex-direction: column;
+ }
+.title-con h1 {
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+.student-con h3{
+    border: 1px solid white;
+    width: auto;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-family: 'Acme', sans-serif;
+    font-family: 'Cinzel', serif;
+}
+.button-box{
+    width: 220px;
+    height: 40px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #4568dc, #b06ab3);
+    border-radius: 30px;
+    transition: .5s;
+}
+.forms{
+    display: flex;
+    width: 250px;
+    margin-bottom: 30px;
+    padding: 0px 10px;
+    height: 35px;
+}
+.input-group{
+    position: absolute;
+    transition: .5s;
+}
+.input-field{
+    width: 100%;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit-btn{
+    width: 85%;
+    cursor: pointer;
+    display: block;
+    background: linear-gradient(to right, #4568dc, #b06ab3);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+}
+.check-box{
+    margin-right: 10px;
+}
+span{
+    color: white;
+    padding-top: 8px;
+    font-family: 'Acme', sans-serif;
+    font-family: 'Cinzel', serif;
+    font-family: 'News Cycle', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
+
+}
+[form-sec]{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+}
+[social-icon-sec]{
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    width: 60%;
+   
+}
+i{
+    padding: 5.5px;
+    background: linear-gradient(to right, #ff105F,#ffad06);
+    border-radius: 50%;
+    color: white;
+    margin-right: 10px;
+}
+[submit-btn]{
+    display: flex;
+    justify-content: center;
+}
+#login{
+    left: 50px;
+}
+#register{
+    left: 450px;
+}
+input{
+    color: white;
+   font-size: 13px; 
+    font-family: 'Acme', sans-serif;
+    font-family: 'Cinzel', serif;
+    font-family: 'News Cycle', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
+}
+p{
+    margin-top: 30px;
+    position: relative;
+    color: white;
+    font-style: italic;
+}
+a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+@media only  screen and (max-width: 500px) {
+    .form-box{
+        width: 310px;
+    }
+    .forms{
+        width: 200px;
+    }
+    .title-con{
+        font-size: 10px;
+    }
+    p{
+        font-size: 12px;
+    }
+}
