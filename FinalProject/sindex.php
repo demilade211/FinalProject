@@ -1,33 +1,23 @@
-<?php
-  session_start();
-  $isIndex = 1;
-  if(array_key_exists('teacher_id',$_SESSION) && isset($_SESSION['teacher_id'])) {
-   header('Location: teacher.php');
-  } else {
-    if(!$isIndex) header('Location: lindex.php');
-  }
-?>
+<?php include('regist.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First php</title>
-    <link rel="stylesheet" href="css/lstyle.css">
+    <link rel="stylesheet" href="css/sstyle.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/mlogin.js"></script>
 </head>
 <body>
     <div class="hero">
         <div class="form-con">
             <div class="form-box">
-            <div class="in-form-con" title>
+                 <div class="in-form-con" title>
                     <div class="title-con">
-                    <h1>Smart Attendance</h1>
+                        <h1>Smart Attendance</h1>
                     </div>
                     <div class="student-con">
-                        <h3> Lecturer </h3>
+                        <h3>Student </h3>
                     </div>
                 </div>
                 <div class="in-form-con">
@@ -39,54 +29,56 @@
                 </div>
                <div class="in-form-con" social>
                <div class="social-icons" social-icon-sec>
+                
                </div>
                </div>
                <div class="in-form-con" form-sec>
-               <form id="login" class="input-group">
+               <form id="login" action="sindex.php" class="input-group" method="POST">
                    <div class="forms">
-                   <input type="email" class="input-field" placeholder="@example.com" name="email" required>
+                   <input type="text" name="mat" value="<?php echo $matric?>" class="input-field" placeholder="Matric no e.g 1234/012/sms" required>
                    </div>
                    <div class="forms">
-                   <input type="password" class="input-field" name="password" placeholder="Enter Password" required>
+                   <input type="password" name="pas" class="input-field" placeholder="Enter Password" required>
                    </div>
                    <div class="forms">
                    <input type="checkbox" class="check-box"><span>Remember Password</span>
                    </div>
                    <div class="forms" submit-btn>
-                   <input type="button" class="submit-btn" onclick="processLogin()" value="Log In">
+                   <input type="submit" name="login-btn" class="submit-btn" value="Log In" placeholder="user id" >
                    </div>
-                </form>
-                <form id="register" class="input-group">
+                </form>  
+                <form id="register" action="sindex.php" class="input-group" method="POST">
                    <div class="forms">
-                   <input type="text" class="input-field" name="name" placeholder="user id" required>
-                   </div>
-                   <div class="forms">
-                   <input type="tel" name="tel" class="input-field" name="phone" placeholder="08082453216" required>
+                   <input type="text" name="fullname" value="<?php echo $fullname?>" class="input-field" placeholder="Full Name" required>
                    </div>
                    <div class="forms">
-                   <input type="email" class="input-field" name="email" placeholder="@example.com" required>
+                   <input type="text" name="matric" value="<?php echo $matric?>" class="input-field" placeholder="Matric No e.g 12345/012/sms" required>
                    </div>
                    <div class="forms">
-                   <input type="password" class="input-field" name="password" placeholder="Enter Password" required>
+                   <input type="tel" name="tel" value="<?php echo $tel?>" class="input-field" placeholder="08082453216" required>
                    </div>
                    <div class="forms">
-                   <input type="password" class="input-field" name="password2" placeholder="Confirm Password" required>
+                   <input type="password" name="pass" class="input-field" placeholder="Enter Password" required>
+                   </div>
+                   <div class="forms">
+                   <input type="password" name="cpass" class="input-field" placeholder="Confirm Password" required>
                    </div>
                    <div class="forms">
                    <input type="checkbox" class="check-box" required><span>I agree to the terms and conditions</span>
                    </div>
                    <div class="forms" submit-btn>
-                   <input type="button" class="submit-btn" onclick="processSignup()" value="Register">
+                   <input type="submit" name="reg-btn" class="submit-btn" value="Register" placeholder="user id" >
                    </div>
                 </form>
                </div>
-               <div class="alert hidden">
-                    <span id="span">hi</span>
+               <div class="motto">
+                    <?php include('errors.php') ?>
+                   <p>To help students and reduce work load of <a href="index.php">lecturers</a></p>
+                    
                </div>
             </div>
-            
         </div>
     </div>
-    <script src="lscript.js"></script>
+    <script src="sscript.js"></script>
 </body>
 </html>
